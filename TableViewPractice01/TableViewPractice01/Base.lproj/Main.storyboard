@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableViewPractice01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0W6-mP-Mpx">
+                                <rect key="frame" x="67.5" y="136" width="240" height="369"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="dcg-d1-4ax" customClass="MenuTableViewCell" customModule="TableViewPractice01" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dcg-d1-4ax" id="fbh-E7-wVU">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sandwiches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYE-gh-Bf2">
+                                                    <rect key="frame" x="15" y="11" width="95" height="21"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.59215686270000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4r-qY-xFm">
+                                                    <rect key="frame" x="189" y="11" width="36" height="21"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.59215686270000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.79607843140000001" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="f4r-qY-xFm" secondAttribute="trailing" constant="15" id="cIg-ub-U7k"/>
+                                                <constraint firstItem="f4r-qY-xFm" firstAttribute="width" secondItem="fbh-E7-wVU" secondAttribute="height" multiplier="36:43" id="fw5-yy-yaO"/>
+                                                <constraint firstItem="fYE-gh-Bf2" firstAttribute="top" secondItem="fbh-E7-wVU" secondAttribute="top" constant="11" id="jxG-55-nns"/>
+                                                <constraint firstItem="f4r-qY-xFm" firstAttribute="top" secondItem="fbh-E7-wVU" secondAttribute="top" constant="11" id="kbi-9D-4VL"/>
+                                                <constraint firstItem="fYE-gh-Bf2" firstAttribute="leading" secondItem="fbh-E7-wVU" secondAttribute="leading" constant="15" id="ndJ-2a-Q1z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuCostLabel" destination="f4r-qY-xFm" id="txG-qD-dmJ"/>
+                                            <outlet property="menuNameLabel" destination="fYE-gh-Bf2" id="24V-nD-U4M"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MENU" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF0-2Y-fmB">
+                                <rect key="frame" x="118" y="70" width="139" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LF0-2Y-fmB" secondAttribute="height" multiplier="119:58" constant="20" id="dww-Oe-WFp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="44"/>
+                                <color key="textColor" red="1" green="0.79607843137254897" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0B-er-8ob">
+                                <rect key="frame" x="126" y="520" width="123" height="147"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="34"/>
+                                <state key="normal" title="Order">
+                                    <color key="titleColor" red="1" green="0.79607843140000001" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.59215686274509804" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0W6-mP-Mpx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3aH-GI-LQZ"/>
+                            <constraint firstItem="LF0-2Y-fmB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="118:667" constant="21" id="5dL-Ob-R3N"/>
+                            <constraint firstItem="z0B-er-8ob" firstAttribute="firstBaseline" secondItem="0W6-mP-Mpx" secondAttribute="baseline" constant="95" id="AMQ-ci-aSH"/>
+                            <constraint firstItem="0W6-mP-Mpx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="240:667" id="JuJ-20-4MV"/>
+                            <constraint firstItem="LF0-2Y-fmB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="118" id="P7x-ZL-sRX"/>
+                            <constraint firstItem="LF0-2Y-fmB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="PK4-rX-gM6"/>
+                            <constraint firstItem="z0B-er-8ob" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="123:667" id="XXQ-EP-Wwl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0W6-mP-Mpx" secondAttribute="bottom" constant="162" id="ZSQ-Wu-ao0"/>
+                            <constraint firstItem="0W6-mP-Mpx" firstAttribute="top" secondItem="LF0-2Y-fmB" secondAttribute="top" constant="66" id="gqX-oO-BW1"/>
+                            <constraint firstItem="z0B-er-8ob" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="zWZ-hN-LiN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuTableView" destination="0W6-mP-Mpx" id="5bZ-Kg-b2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
